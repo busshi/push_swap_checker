@@ -1,0 +1,13 @@
+Test your own push_swap... A project for 42 school...
+
+
+Usage: ./push_swap_checker.sh [Numbers of random numbers] [Numbers of tests to run] [-r]
+
+Option -r for reverse sort (bonus)
+
+Git clone this in the root of your push_swap project or edit the path variable in the script...
+
+
+Or just copy/paste this :
+
+git clone https://github.com/busshi/push_swap_checker.git && cd push_swap_checker && ./push_swap_checker.sh
