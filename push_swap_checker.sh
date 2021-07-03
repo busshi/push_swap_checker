@@ -224,19 +224,23 @@ echo -e "Max nb of moves: ${max_moves}${clear}\n"
 
 if [ $ok -eq $nb_tests ] ; then
 	echo -e "${green}Congrats! ${ok} / ${nb_tests}\t:)${clear}"
+	ret=0
 else
 	[[ $ko -le 1 ]] && str="error" || str="errors" 
 	echo -e "${red}${ko} ${str} / ${nb_tests}\t:(${clear}"
+	ret=1
 	if [ -f "$log" ] ; then
-		echo -e "\n\n${orange}Print log errors? (y/n)${clear}"
-		read
-		[ "$REPLY" = "y" -o "$REPLY" = "o" ] && cat "$log"
+#		echo -e "\n\n${orange}Print log errors? (y/n)${clear}"
+		cat "$log"
+#		read
+#		[ "$REPLY" = "y" -o "$REPLY" = "o" ] && cat "$log"
 	else
 		echo "Not perfect but all tests passed! ===> Number of operations could be optimize..."
+		ret=0
 	fi
 fi
 
 rm -f "$log"
 
 
-exit 0
+exit $ret
