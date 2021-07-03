@@ -17,11 +17,11 @@ sleep 3
 
 
 error=0
-tests=1000
+[ $1 = "fast" ] && tests=100 || tests=1000
 
 for nb in 1 2 3 4 5 100 500; do
-	[[ $nb -eq 100 ]] && tests=5
-	[[ $nb -eq 500 ]] && tests=1
+	[[ $nb -eq 100 ]] && tests=$(( $tests / 10 ))
+	[[ $nb -eq 500 ]] && tests=$(( $tests / 2 ))
 	/bin/bash push_swap_checker.sh $nb $tests
 	check $nb
 done

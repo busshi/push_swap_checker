@@ -9,12 +9,15 @@ git clone https://github.com/busshi/push_swap_checker.git && cd push_swap_checke
 
 
 
-Usage: /bin/bash push_swap_checker.sh [Numbers of random numbers] [Numbers of tests to run] [-r]
+Checker usage: /bin/bash push_swap_checker.sh [Numbers of random numbers] [Numbers of tests to run] [-r]
 
 Option -r for reverse sort (bonus)
 
-
-
-Usage: grademe.sh run all evaluations tests with 1 to 5 numbers, 100 numbers and 500 numbers
 You can edit grademe.sh to change the number of tests to run...
 
+
+
+Grademe usage:
+grademe.sh : run all evaluations tests with 1 to 5 numbers, 100 numbers and 500 numbers
+
+---> grademe.sh fast : decrease the number of tests
