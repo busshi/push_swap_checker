@@ -1,6 +1,8 @@
 Test your own push_swap... A project for 42 school...
 
-
+<p align="center">
+	<img src="./assets/push_swap_checker.gif" >
+</p>
 
 Git clone this in the root of your push_swap project or edit the path variable in the script...
 
